@@ -1,0 +1,34 @@
+.App{
+  position: relative;
+}
+.container {
+  width: 100%;
+  overflow: hidden;
+}
+
+/* Small  */
+
+@media (max-width: 640px) {
+  .container {
+    max-width:640px;
+  }
+}
+/* // medium  */
+
+ @media (min-width:768px) {
+  .container {
+    min-width: 768px;
+    /* border: 1px solid red; */
+  }
+} 
+/*
+
+
+//large 
+
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+*/

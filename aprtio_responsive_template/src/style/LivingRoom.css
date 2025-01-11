@@ -1,0 +1,142 @@
+.living_room {
+  width: 100%;
+  display: flex;
+  background-image: url("../imgs/cube.jpg");
+  background-size: cover;
+  position: relative;
+  margin-top: 100px;
+}
+
+
+@media (max-width:991px){
+  .living_room {
+    flex-direction: column;
+  }
+}
+
+
+.living_room .living_room_pic img{
+  width: 100%;
+  margin-top: 100px;
+}
+
+.living_room::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.884);
+}
+
+.living_room .living_content {
+  width: 80%;
+  margin:auto 0 auto auto;
+  display:grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 20px;
+  z-index: 20;
+  padding: 20px;
+}
+
+@media (max-width:767px){
+
+  .living_room .living_content{
+  width:90%;
+margin:30px auto !important;
+padding: 0;
+    grid-template-columns:1fr;
+  }
+  .living_room .living_room_pic {
+    margin:0 !important;
+  }
+
+}
+
+@media (min-width:767px) and (max-width:991px){
+
+  .living_room .living_content{
+    width:90%;
+  margin:30px auto !important;
+  padding: 0;
+      grid-template-columns:repeat(2,1fr);
+    }
+    .living_room .living_room_pic {
+      margin:0 !important;
+    }
+}
+
+.living_content .card_cont {
+  padding: 5px;
+  /* width:100%; */
+  height: 180px;
+  border: 1px solid rgb(73, 73, 73);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(19, 19, 19);
+  color: white;
+  transition: 3s ease-in-out;
+  position: relative;
+}
+.living_content .card_cont .card_pic {
+  width: 50px;
+  height: 50px;
+  background-color: white;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.living_content .card_cont img {
+  width: 40px;
+  height: 40px;
+  position: relative;
+}
+
+.card_cont h1 {
+  font-size: 1.5rem;
+  font-weight: normal;
+}
+/* ---------------------------------------------------------------------------- */
+
+.card_cont .flip_card {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: 1s ease-in-out;
+  transform-style: preserve-3d;
+}
+.card_cont .face {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  backface-visibility: hidden;
+  transition: 1s ease-in-out;
+}
+
+
+.card_cont .flip_card .back {
+  background-color: rgba(252, 3, 3, 0.507);
+  transform: rotateX(180deg);
+}
+
+.living_content .card_cont .flip_card:hover {
+  transform: rotateX(180deg);
+  transition: 1s ease-in-out;
+}
+/* ---------------------------------------------------------------------------- */
+.living_room .living_room_pic {
+  z-index: 20;
+  margin: -150px 0 -40px;
+}
+
+.living_room_pic img{
+  width: 100%;
+}

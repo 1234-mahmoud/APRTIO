@@ -1,0 +1,110 @@
+.floor_container{
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   width: 100%;
+}
+.floor{
+    width: 100%;
+    margin:40px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:30px;
+}
+
+@media (max-width:640px){
+    .floor{
+        display: flex;
+       flex-direction: column;
+    }
+    .floor .pic{
+
+        padding: 20px !important;
+    }
+    .floor .pic img{
+     width:250px !important;
+    }
+  }
+
+  @media (min-width:641px) and (max-width:900px){
+    .floor{
+        display: flex;
+       flex-direction: column;
+    }
+    .floor .pic{
+
+        padding: 20px !important;
+    }
+    .floor .pic img{
+     width:100% !important;
+    }
+
+    .floor .sideBar{
+        width: 350px !important; 
+    }
+  }
+.floor .pic{
+    border:1px solid rgb(146, 146, 146);
+    height:100%;
+    padding: 0px 160px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.floor .sideBar{
+    height:100%;
+    width: 250px;
+    background-color: rgba(230, 229, 229, 0.712);
+    display: flex;
+    flex-direction: column;
+    justify-content:flex-start;
+    align-items: flex-start;
+}
+.sideBar ul{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+.sideBar ul li{
+    font-size:1.3rem;
+    list-style: none;
+    margin:15px 0px;
+    width: fit-content;
+    position: relative;
+}
+
+.sideBar ul li:after{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left:50%;
+    width:0;
+    height: 3px;
+    margin-bottom: -10px;
+    background-color: black;
+    transition: .5s ease-in-out;
+}
+
+.sideBar ul li:before{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right:50%;
+    width:0;
+    height: 3px;
+    margin-bottom: -10px;
+    background-color: black;
+    transition: .5s ease-in-out;
+}
+
+.sideBar ul li:hover:before , .sideBar ul li:hover:after{
+width:50%;
+}
+
+.sideBar ul li:hover{
+    color: rgb(173, 144, 89);
+}

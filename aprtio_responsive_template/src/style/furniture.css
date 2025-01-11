@@ -1,0 +1,92 @@
+.furniture {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.furniture .furImage {
+  flex: 25%;
+  display: flex;
+  position: relative;
+  perspective: 600;
+  overflow: hidden;
+}
+
+
+.furniture .furImage img {
+  width: 100%;
+  height: 400px;
+  transition:1s ease-in-out;
+
+}
+@media (max-width:767px){
+  .furniture {
+    display: flex;
+    flex-direction: column;
+  }
+
+}
+@media (min-width:768px) and (max-width:991px){
+  .furniture .furImage {
+    flex: 50%;
+  }
+}
+
+.furImage .flip {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+
+  transform-style: preserve-3d;
+  transition: transform 1s ease-in-out;
+  color: white;
+}
+.flip .face {
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  backface-visibility: hidden;
+}
+.flip .front {
+  background-color: rgba(174, 174, 175, 0.301);
+}
+
+.flip .front:hover .front_info{
+transform: translateY(180px);
+transition: transform 1s ease-in-out;
+
+}
+
+.flip .back {
+  background-color: rgba(245, 31, 42, 0.651);
+  transform: rotateY(180deg);
+}
+.flip:hover {
+  transform: rotateY(180deg);
+}
+
+.furImage:hover img {
+  transform: scale(1.2);
+}
+
+.back{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.back  .back_info{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.back_info p {
+    width: 300px;
+    text-align: center;
+}

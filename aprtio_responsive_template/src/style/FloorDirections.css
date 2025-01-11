@@ -1,0 +1,95 @@
+.fdirections {
+  display: flex;
+  gap: 30px;
+  padding-left: 240px;
+}
+@media (max-width:767px){
+  .fdirections {
+    display: flex;
+    flex-direction: column;
+    padding:10px !important;;
+  }
+  .fdirections .pic img {
+    height:100%;
+    width:300px;
+  }
+  
+.fdirections .floor_info {
+  width: 300px !important;
+  padding-left:15px;
+}
+
+.fdirections .floor_info p {
+  font-size: .9rem !important;
+  padding: 10px;
+  
+  margin-top: -10px;
+}
+}
+
+@media (min-width:768px) and (max-width:991px){
+  .fdirections {
+    display: flex;
+    flex-direction: column;
+    padding:10px !important;;
+  }
+  .fdirections .pic img {
+    height:100%;
+    width:600px;
+  }
+  
+.fdirections .floor_info {
+  width: 500px !important;
+  padding-left:15px;
+}
+
+.fdirections .floor_info p {
+  font-size: 1.2rem !important;
+  padding: 10px;
+  
+  margin-top: -10px;
+}
+}
+
+
+.fdirections .pic img {
+  height: 300px;
+}
+.fdirections .floor_info button {
+  background-color: black !important;
+  color: rgb(241, 219, 93) !important;
+  border: none;
+  position: relative;
+  width: 250px;
+  height: 60px;
+  margin-top: 30px;
+}
+
+.floor_info button::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: transparent;
+  z-index: -1;
+}
+
+.floor_info button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: transparent;
+  z-index: -1;
+}
+
+.fdirections .floor_info {
+  width: 450px;
+  margin-top: 30px;
+}
+
+.fdirections .floor_info p {
+  font-size: 1.2rem;
+  color: gray;
+  margin-top: -10px;
+}

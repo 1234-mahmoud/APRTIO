@@ -1,0 +1,127 @@
+.furNews {
+  margin: auto;
+  width: 80%;
+}
+
+.furNews .container {
+  width: 100%;
+  margin: 20px auto;
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(3, 300px);
+  gap: 20px;
+}
+
+@media (max-width: 767px) {
+  .furNews {
+    width: 95%;
+  }
+  .furNews .container {
+   margin: 0;
+    grid-template-columns:100%;
+}
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .furNews {
+    width: 95%;
+  }
+  .furNews .container {
+   margin: 0;
+    grid-template-columns:repeat(2,1fr);
+}
+}
+
+.furNews .cardNews {
+  /* flex:30.33%; */
+  /* width: 300px; */
+  height: 480px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.cardNews:nth-of-type(1) {
+  background-color: rgba(245, 245, 245, 0.341);
+  padding:10px 10px 20px;
+}
+
+@media (max-width: 767px) {
+  .cardNews:nth-of-type(1){
+    height: fit-content;
+  }
+}
+
+.cardNews:nth-of-type(2),
+.cardNews:nth-of-type(3) {
+  background-color: rgb(233, 233, 233);
+}
+.cardNews_cont {
+  position: relative;
+}
+.cardNews_cont .cardNews_cont_pic {
+  position: relative;
+  overflow: hidden;
+}
+.cardNews_cont .cardNews_cont_pic::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 0;
+  transition: 0.5s ease-in-out;
+}
+.cardNews_cont .cardNews_cont_pic:hover::after {
+  content: "";
+  background-color: rgba(243, 26, 55, 0.664);
+  position: absolute;
+
+  height: 100%;
+}
+.cardNews_cont .cardNews_cont_pic img {
+  width: 100vw;
+  /* max-width: 100%; */
+}
+
+.cardNews_cont_pic:hover img {
+  transition: 0.5s ease-in-out;
+
+  transform: scale(1.3);
+}
+.cardNews_cont img {
+  margin: auto;
+  width: 300px;
+  max-width: 100%;
+  height: 200px;
+  transition: 0.5s ease-in-out;
+}
+.cardNews_cont .cardNews_cont_info {
+  padding: 20px;
+}
+.cardNews_cont_info h2 {
+  transition: 0.5s ease-in-out;
+}
+
+.cardNews_cont_info h2:hover {
+  color: rgb(194, 170, 34);
+}
+
+.cardNews_cont_info a {
+  font-weight: 600;
+  text-decoration: none;
+  color: rgb(194, 170, 34);
+  border-bottom: 1px solid black;
+}
+
+.cardNews_cont::after {
+  content: "byKosmi Kotalia January 1, 2022";
+  position: absolute;
+  top: 20px;
+  left: 0;
+  width: 250px;
+  height: 30px;
+  background-color: rgb(39, 38, 38);
+  color: white;
+  padding: 2.5px 10px 0;
+}
